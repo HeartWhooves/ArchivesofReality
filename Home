@@ -1,0 +1,26 @@
+<!DOCTYPE html>\
+<html lang="en">
+<head>
+
+</head>
+
+<body>
+    <header>
+        <h1>The Archives</h1>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Viewport</li>
+                <li>Characters</li>
+                <li>Worlds</li>
+            </ul>
+        </nav>
+    </header>
+
+</body>
+    <footer>
+        <p>&copy; 2024 Cosmic Archives. All rights reserved.</p>
+    </footer>
+</html>
+
