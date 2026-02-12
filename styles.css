@@ -1,0 +1,37 @@
+body {
+  background-color: black;
+
+}
+h1 {
+  color: purple;
+  text-align: center;
+}
+p {
+  color: white;
+  text-indent: 30px;
+  margin: 30px;
+}
+#navigator {
+    box-align: center;
+    width: 100%;
+  background: purple;
+  color: gold;
+
+}
+a {
+  color: gold;
+  text-decoration: none;
+  padding: 15px;
+}
+h2 {
+  color: purple;
+}
+footer {
+  color: white;
+  text-align: center;
+  font-size: small;
+}
+h3 {
+  color: purple;
+  text-align: center;
+}
