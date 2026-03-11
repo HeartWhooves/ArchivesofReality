@@ -83,25 +83,27 @@ main {
 }
 .ArchivistChatPrev {
   background-color: #be7c01;
-  color: black;
-  border: none;
+  color: #1a1044;
+  border: 2px double purple;
   padding: 5px 10px;
   margin: 10px;
   cursor: pointer;
   position: absolute;
-  bottom: 33%;
-  left: 48%;
+  top: 5.5%;
+  right: -4px;
+ font-family: 'Courier New', Courier, monospace;
 }
 .ArchivistChatNext {
   background-color: #be7c01;
-  color: black;
-  border: none;
+  color: #1a1044;
+  border: 2px double purple;
   padding: 5px 10px;
   margin: 10px;
   cursor: pointer;
   position: absolute;
-  bottom: 33%;
-  right: -7%;
+  top: 5.5%;
+  right: -59px;
+ font-family: 'Courier New', Courier, monospace;
 }
 .IntroductionImage {
   position: absolute;
