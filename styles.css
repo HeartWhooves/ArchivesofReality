@@ -61,6 +61,7 @@ main {
 .IntroductionContainer {
   position: relative;
   width: 90%;
+  height: 600px;
 }
 .Introduction {
   color: #be7c01;
@@ -72,11 +73,13 @@ main {
   margin-left: -5px;
   resize: none;
   cursor:default;
-  width : 100%;
-  height: 100%;
+  width : 50%;
   field-sizing: content;
-  font-size: 140%;
+  font-size: 120%;
   font-family: 'Courier New', Courier, monospace;
+  position: absolute;
+  left: 50%;
+  top: 50px;
 }
 .ArchivistChatPrev {
   background-color: #be7c01;
@@ -86,8 +89,8 @@ main {
   margin: 10px;
   cursor: pointer;
   position: absolute;
-  bottom: 15px;
-  left: -15px;
+  bottom: 33%;
+  left: 48%;
 }
 .ArchivistChatNext {
   background-color: #be7c01;
@@ -97,6 +100,13 @@ main {
   margin: 10px;
   cursor: pointer;
   position: absolute;
-  bottom: 15px;
-  right: -59px;
+  bottom: 33%;
+  right: -7%;
+}
+.IntroductionImage {
+  position: absolute;
+  top: 10px;
+  left: 40%;
+  transform: translateX(-50%);
+  width:80%;
 }
