@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Lobby - The Archives</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="java.js"></script>
+   
 </head>
 
 <body>
@@ -23,18 +23,21 @@
     </header>
         <div id="Updates" class ="container">
     <main>
-        <p>Welcome to My Archive, My personal collection of tapestries and stories gathered from the depths of the Cosmic Loom itself. The tales you will read here are older than time itself, gathered straight from the source and preserved outside the bounds of the multiverse. This Website will be your window into these dreams, and I will be your guide as Currator and Archivist.</p>
-        <p>As you explore the various sections of this Archive, you will find information about each character, world, and major event that make up these tales. Each story is carefully curated and translated to ensure that the stories will never fade to shadow. It will take time to digitize my collection, and even longer to enscribe the fullly preserved tapestries as they are everchanging windows into all time and space in its depicted reality. I appreciate your patience as my team and I work to bring these stories to you.</p>
+        <div class="IntroductionContainer">
+        <textarea  class="Introduction" id="Introduction" rows="8" cols="70" readonly>   Welcome to My Archive, My personal collection of tapestries and stories gathered from the depths of the Cosmic Loom itself. The tales you will read here are older than time itself, gathered straight from the source and preserved outside the bounds of the multiverse. This Website will be your window into these dreams, and I will be your guide as Currator and Archivist.</textarea>
+        <button class="ArchivistChatPrev" id="prevIntro" onclick="prevIntro()">Back</button>
+        <button class="ArchivistChatNext" id="nextIntro" onclick="nextIntro()">Next</button>
+        </div>
     </main>
         <aside class="sidebar">
             <h2>Latest Additions</h2>
                 <h3>Characters</h3>
                     <ul>
-                    <li><a href="Characters.html#Character1">Ryze Endite</a></li>
+                        <li><a href="Characters.html#Character1">Ryze Endite</a></li>
                     </ul>
                 <h3>Worlds</h3>
                     <ul>
-                    <li><a href="Worlds.html#World1">Kingdom of Endite</a></li>
+                        <li><a href="Worlds.html#World1">Kingdom of Endite</a></li>
                     </ul>
                 <h3>Stories</h3>
                     <ul>
@@ -47,6 +50,7 @@
                     </ul>
         </aside>
     </div>
+    <script src="java.js"></script>
 </body>
     <footer>
         <p>&copy; 2026 Cosmic Archivist. All rights reserved.</p>

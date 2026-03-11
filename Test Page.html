@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Text Box</title>
+</head>
+<body>
+
+    <!-- 1. The Text Box (Input Field) -->
+    <input type="text" id="myTextBox" value="Initial text" size="30" readonly>
+    
+    <!-- 2. The Button -->
+    <button onclick="changeText()">Click to Change Text</button>
+
+    <!--New Test-->
+
+    <textarea id="myTextarea" rows="4" cols="50">Initial content goes here.</textarea>
+
+    <button id="changeButton">Change Content</button>
+
+    <!-- Link to your JavaScript file -->
+    <script src="script.js"></script>
+
+    <!-- 3. The JavaScript Function -->
+    <script>
+        function changeText() {
+            // Get a reference to the text box element by its ID
+            var textBox = document.getElementById("myTextBox");
+            
+            // Change the value of the text box
+            textBox.value = "The text has been changed!";
+        }
+
+// Select the elements using their IDs
+const textareaElement = document.getElementById('myTextarea');
+const buttonElement = document.getElementById('changeButton');
+
+// Define the function to change the content
+function changeTextareaContent() {
+    textareaElement.value = 'The new content has been set!';
+}
+
+// Add a click event listener to the button
+buttonElement.addEventListener('click', changeTextareaContent);
+
+    </script>
+
+
+</body>
+</html>
