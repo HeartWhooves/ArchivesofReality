@@ -10,8 +10,8 @@
 <body>
     <header>
         <h1>The Archives</h1>
-        <nav>
-            <table id="navigator">
+        <nav class="navigator">
+            <table class="navigator">
                 <th><a href="index.html">Lobby</a></th>
                 <th><a href="About.html">About</a></th>
                 <th><a href="Viewport.html">Viewport</a></th>
@@ -21,8 +21,9 @@
         </nav>
         <img src="images/Archive_Header.png" alt="Archive Header" id="HeaderImg" height="200px" style="display: block; margin: 0 auto; width: auto; max-width: fit-content;" />
     </header>
-        <div id="Updates" class ="container">
     <main>
+      <div class ="LobbyContainer">
+
         <div class="IntroductionContainer">
             <img src="images/Archivist Dialogue Image.png" alt="Archivist Dialogue Image" class="IntroductionImage" />
             <textarea  class="Introduction" id="Introduction" rows="8" cols="70" readonly>   Welcome to My Archive, My personal collection of tapestries and stories gathered from the depths of the Cosmic Loom itself. The tales you will read here are older than time itself, gathered straight from the source and preserved outside the bounds of the multiverse. This Website will be your window into these dreams, and I will be your guide as Currator and Archivist.</textarea>
@@ -30,15 +31,23 @@
             <button class="ArchivistChatNext" id="nextIntro" onclick="nextIntro()">Next</button>
         </div>
     </main>
-        <aside class="sidebar">
+        <aside class="Updates">
             <h2>Latest Additions</h2>
                 <h3>Characters</h3>
                     <ul>
-                        <li><a href="Characters.html#Character1">Ryze Endite</a></li>
+                        <li><a href="Characters.html#C-KoE">Ryze Endite</a></li>
+                        <li><a href="Characters.html#C-CL">The Avatar</a></li>
+                        <li><a href="Characters.html#C-CL">The Archivist</a></li>
+                        <li><a href="Characters.html#C-CL">The Weaver</a></li>
+                        <li><a href="Characters.html#C-CL">The Cessation</a></li>
                     </ul>
                 <h3>Worlds</h3>
                     <ul>
                         <li><a href="Worlds.html#World1">Kingdom of Endite</a></li>
+                        <li><a href="Worlds.html#World2">FoE:Luck</a></li>
+                        <li><a href="Worlds.html#World3">The Interdimensional Cafe</a></li>
+                        <li><a href="Worlds.html#World4">The Void</a></li>
+                        <li><a href="Worlds.html#World5">The Cosmic Loom</a></li>
                     </ul>
                 <h3>Stories</h3>
                     <ul>
@@ -46,11 +55,13 @@
                     </ul>
                 <h3>Site Features</h3>
                     <ul>
-                        <li>The Above Additions are placeholders.</li>
+                        <li>The Above Additions are placeholders. Mostly.</li>
                         <li>Latest Additions Tab</li>
+                        <li>Introduction Window</li>
+                        <li>Character Information Tabs</li>
                     </ul>
         </aside>
-    </div>
+      </div>
     <script src="java.js"></script>
 </body>
     <footer>

@@ -11,13 +11,15 @@ p {
   text-indent: 30px;
   margin: 30px;
 }
-#navigator {
+.navigator {
     box-align: center;
     width: 100%;
   background: purple;
   color: #be7c01;
-
+  position: sticky;
+  top: 0px;
 }
+
 a {
   color: #be7c01;
   text-decoration: none;
@@ -41,9 +43,8 @@ li {
   text-align: left;
   margin-left: 5px;
 }
-.container {
+.LobbyContainer {
   background-color: black;
-  display: flex;
   padding: 20px;
   margin: 20px;
   gap: 20px;
@@ -52,22 +53,24 @@ main {
   flex: 3;
   padding: 1rem;
 }
-.sidebar {
-  flex: 1;
+.Updates {
+  position: absolute;
   background-color: #050505;
   padding: 1rem;
   border-left: 2px solid #be7c01;
+  width:25%;
+  right: 0px;
+  top:350px;
 }
 .IntroductionContainer {
   position: relative;
-  width: 90%;
+  width: 65%;
   height: 600px;
 }
 .Introduction {
   color: #be7c01;
   background-color: #050505;
   padding: 25px;
-  padding-bottom: 50px;
   border: 2px solid #be7c01;
   margin: 20px;
   margin-left: -5px;
@@ -90,7 +93,7 @@ main {
   cursor: pointer;
   position: absolute;
   top: 5.5%;
-  right: -4px;
+  right: -3px;
  font-family: 'Courier New', Courier, monospace;
 }
 .ArchivistChatNext {
@@ -110,5 +113,61 @@ main {
   top: 10px;
   left: 40%;
   transform: translateX(-50%);
-  width:80%;
+  height: 500px;
+}
+details {
+  background-color: #050505;
+  color: #be7c01;
+  border: 2px solid #be7c01;
+  padding: 10px;
+  margin: 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+summary {
+  font-weight: bold;
+  cursor: pointer;
+}
+.CharacterContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display:grid;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: 5fr 5fr;
+}
+
+.Storys {
+  color: #1a1044;
+  border: 2px double purple;
+  padding: 5px 10px;
+  margin: 10px;
+  cursor: pointer;
+  position: relative;
+  top: 5.5%;
+  left: -3px;
+  font-family: 'Courier New', Courier, monospace;
+  width: 90%;
+}
+
+
+
+/* tests below*/
+
+
+.grid-container {
+  display: grid; /* Declares the element as a grid container */
+  grid-template-columns: repeat(2, 1fr); /* Creates 2 columns of equal width (1 fraction of available space) */
+  grid-template-rows: repeat(2, 1fr); /* Creates 2 rows of equal height */
+  gap: 1rem; /* Adds space between the grid items */
+  width: 100%; /* Ensures the container takes up the full width */
+}
+
+.grid-item {
+  /* Additional styling to make the divs visible and identical */
+  background-color: #4AA2D9;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid black;
+  box-sizing: border-box; /* Ensures padding/border is included in the element's total width/height */
 }
