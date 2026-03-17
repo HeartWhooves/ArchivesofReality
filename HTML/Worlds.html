@@ -1,15 +1,16 @@
-<!DOCTYPE html>
+<!DOCTYPE html>\
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Characters - The Archives</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="canonical" href="http://archivesofreality.com/Characters.html">
+    <title>Worlds - The Archives</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="canonical" href="http://archivesofreality.com/Worlds.html">
+
 </head>
 
-<body id="Characters">
+<body id="Worlds">
     <header>
-        <h1>Meet the Cast</h1>
+        <h1>Worlds Information</h1>
         <nav class="navigator">
             <table class="navigator">
                 <th><a href="index.html">Lobby</a></th>
@@ -19,14 +20,15 @@
                 <th><a href="Worlds.html">Worlds</a></th>
             </table>
         </nav>
-    
-        <img src="images/Archive_Header.png" alt="Archive Header" id="HeaderImg" height="200px" style="display: block; margin: 0 auto; width: auto; max-width: fit-content;" />
-
+        <img src="../images/Archive_Header.png" alt="Archive Header" id="HeaderImg" height="200px" style="display: block; margin: 0 auto; width: auto; max-width: fit-content;" />
     </header>
-    <main> 
-                <p>test</p>
-        <div class="CharacterContainer" id="Row1">
-            <div class="Storys" id="C-KoE">
+    <main>
+        #eventually I want to add embeded world anvil interactive maps to all of these as well. this can be done with 'iframe' tags. First I need to actually make them though.
+        <div  id="Row1">
+           <details id="W-KoE">
+            <summary>Kingdom of Endite</summary>
+            <div class="WorldsContainer">
+            <div class="WorldsInfo" >
                 <h2>Kingdom of Endite</h2>
                 <details>
                     <summary>Ryze Endite</summary>
@@ -50,7 +52,17 @@
                 </details>
 
             </div>
-            <div class="Storys" id="C-CL">
+            <div class="WorldsMap">
+                <iframe class="Map" id="M-KoE"></iframe>
+            </div>
+            </div>
+        </details>
+
+        <details id="W-CL">
+            <summary>Cosmic Loom</summary>
+            <div class="WorldsContainer">
+
+            <div class="WorldsInfo">
                 <h2>Cosmic Loom</h2>
                 <details>
                     <summary>The Archivist</summary>
@@ -95,9 +107,17 @@
                 </details>
 
             </div>
+            <div class="WorldsMap">
+                <iframe class="Map" id="M-CL"></iframe>
+            </div>
+            </div>
+            </details>
 
+            <details id="W-CotBS">
+            <summary>Cult of the Black Star</summary>
+            <div class="WorldsContainer">
 
-            <div class="Storys" id="C-CotBS">
+            <div class="WorldsInfo">
                 <h2>Cult of the Black Star</h2>
                 <details>
                     <summary>Character 1</summary>
@@ -121,8 +141,19 @@
                 </details>
 
             </div>
-            <div class="Storys" id="C-CC">
-                <h2>Cellestial Cafe</h2>
+
+            <div class="WorldsMap">
+                <iframe class="Map" id="M-CotBS"></iframe>
+            </div>
+            </div>
+            </details>
+
+
+            <details id="W-CC">
+            <summary>Celestial Cafe</summary>
+            <div class="WorldsContainer">
+            <div class="WorldsInfo">
+                <h2>Celestial Cafe</h2>
                 <details>
                     <summary>Character 1</summary>
                     <div>
@@ -144,7 +175,18 @@
                     </div>
                 </details>
             </div>
-            <div class="Storys" id="C-SL">
+
+            <div class="WorldsMap">
+                <iframe class="Map" id="M-KoE"></iframe>
+            </div>
+            </div>
+            </details>
+
+            <details id="W-SL">
+                <summary>Starstruck Love</summary>
+
+            <div class="WorldsContainer">
+            <div class="WorldsInfo">
                 <h2>Starstruck Love</h2>
                 <details>
                     <summary>Character 1</summary>
@@ -168,7 +210,17 @@
                 </details>
 
             </div>
-            <div class="Storys" id="C-FoEL">
+
+            <div class="WorldsMap">
+                <iframe class="Map" id="M-SL"></iframe>
+            </div>
+            </div>
+            </details>
+
+            <details id="W-FoEL">
+                <summary>FoE: Luck</summary>
+            <div class="WorldsContainer">
+            <div class="WorldsInfo">
                 <h2>FoE: Luck</h2>
                 <details>
                     <summary>Character 1</summary>
@@ -192,7 +244,17 @@
                 </details>
 
             </div>
-            <div class="Storys" id="C-FW">
+
+            <div class="WorldsMap">
+                <iframe class="Map" id="M-FoEL"></iframe>
+            </div>
+            </div> 
+            </details>
+
+            <details id="W-FW">
+                <summary>A Fallen World</summary>
+            <div class="WorldsContainer">
+            <div class="WorldsInfo">
                 <h2>A Fallen World</h2>
                 <details>
                     <summary>Character 1</summary>
@@ -216,7 +278,18 @@
                 </details>
 
             </div>
-            <div class="Storys" id="C-JoM">
+
+            <div class="WorldsMap">
+                <iframe class="Map" id="M-FW"></iframe>
+            </div>
+            </div>
+            </details>
+            
+            <details id="W-JoM">
+                <summary>Journal of a Merchant</summary>
+            <div class="WorldsContainer">
+
+            <div class="WorldsInfo">
                 <h2>Journal of a Merchant</h2>
                 <details>
                     <summary>Character 1</summary>
@@ -239,7 +312,52 @@
                     </div>
                 </details>
             </div>
-                        <div class="Storys">
+
+            <div class="WorldsMap">
+                <iframe class="Map" id="M-JoM"></iframe>
+            </div>
+            </div>
+            </details>
+
+                <details id="W-Placeholder">
+                    <summary>Placeholder</summary>  
+                    <div class="WorldsContainer">
+                        <div class="WorldsInfo">
+                <h2>Placeholder</h2>
+                <details>
+                    <summary>Character 1</summary>
+                    <div>
+                        <p>This is the full content of the article. It can contain text, images, or any other HTML elements.</p>
+                        <ul>
+                            <li>Point 1</li>
+                            <li>Point 2</li>
+                        </ul>
+                    </div>
+                </details>
+                                <details>
+                    <summary>Character 2</summary>
+                    <div>
+                        <p>This is the full content of the article. It can contain text, images, or any other HTML elements.</p>
+                        <ul>
+                            <li>Point 1</li>
+                            <li>Point 2</li>
+                        </ul>
+                    </div>
+                
+                </details>
+
+            </div>
+
+            <div class="WorldsMap">
+                <iframe class="Map" id="M-Placeholder"></iframe>
+            </div>
+            </div>
+            </details>
+
+            <details id="W-Placeholder">
+                    <summary>Placeholder</summary>
+            <div class="WorldsContainer">
+            <div class="WorldsInfo">
                 <h2>Placeholder</h2>
                 <details>
                     <summary>Character 1</summary>
@@ -261,37 +379,20 @@
                         </ul>
                     </div>
                 </details>
-
-            </div>
-            <div class="Storys">
-                <h2>Placeholder</h2>
-                <details>
-                    <summary>Character 1</summary>
-                    <div>
-                        <p>This is the full content of the article. It can contain text, images, or any other HTML elements.</p>
-                        <ul>
-                            <li>Point 1</li>
-                            <li>Point 2</li>
-                        </ul>
-                    </div>
-                </details>
-                                <details>
-                    <summary>Character 2</summary>
-                    <div>
-                        <p>This is the full content of the article. It can contain text, images, or any other HTML elements.</p>
-                        <ul>
-                            <li>Point 1</li>
-                            <li>Point 2</li>
-                        </ul>
-                    </div>
-                </details>
             </div>
 
+                        <div class="WorldsMap">
+                <iframe class="Map" id="M-Placeholder"></iframe>
+            </div>
+            </div>
+            </details>
+
+
+        <p>test</p>
     </main>
+        <script src="java.js"></script>
+</body>
     <footer>
         <p>&copy; 2026 Cosmic Archivist. All rights reserved.</p>
     </footer>
-        <script src="java.js"></script>
-
-</body>
 </html>

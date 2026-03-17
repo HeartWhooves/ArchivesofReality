@@ -203,6 +203,49 @@ summary {
 
 }
 
+.reader-container {
+  border:#be7c01  2px solid;
+  max-width: 800px; /* Limits width for readability */
+  margin: 0 auto;
+  background: #10081d;
+  padding: 40px;
+  border-radius: 5px;
+}
+
+.story-content {
+    background: #160b29;
+    font-size: 18px;
+    margin-top: 30px;
+    border:#050505 2px solid;
+}
+
+.story-content p {
+    margin-bottom: 1.5em; /* Traditional fiction paragraph spacing */
+}
+
+.PrevC {
+  position: relative;
+  background: #050505;
+  color: #be7c01;
+  border: 2px double #be7c01;
+  margin: 2px;
+  padding: 3px;
+}
+
+.NextC {
+  position: relative;
+  background: #050505;
+  color: #be7c01;
+  border: 2px double #be7c01;
+  margin: 2px;
+  padding: 3px;
+}
+
+.ChapBut {
+  text-align: center;
+  margin: 10px;
+}
+
 /* tests below*/
 
 
