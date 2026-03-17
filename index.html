@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <title>Lobby - The Archives</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="canonical" href="http://archivesofreality.com/index.html">
    
 </head>
 
-<body>
+<body id="Lobby">
     <header>
         <h1>The Archives</h1>
         <nav class="navigator">
@@ -62,6 +63,23 @@
                     </ul>
         </aside>
       </div>
+      <div id="disqus_thread"></div>
+<script>
+    // this script is exclusive to this disqus comment section. Repeat but re-configure for other pages when needed.
+
+    var disqus_config = function () {
+    this.page.url = archivesofreality.com/index.html;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = Lobby; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://archives-of-reality.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     <script src="java.js"></script>
 </body>
     <footer>

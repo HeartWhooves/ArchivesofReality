@@ -148,7 +148,49 @@ summary {
   font-family: 'Courier New', Courier, monospace;
   width: 90%;
 }
-
+.WorldsContainer {
+  position: relative;
+  width: 90%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  margin: 3%;
+}
+.WorldsInfo {
+  color: #1a1044;
+  border: 2px double purple;
+  padding: 10px;
+  margin: 00px;
+  cursor: pointer;
+  position: relative;
+  top: 5.5%;
+  left: -3px;
+  font-family: 'Courier New', Courier, monospace;
+  width: 100%;
+  height: 90%;
+  border-right: none;
+}
+.WorldsMap {
+  color: #1a1044;
+  border: 2px double purple;
+  padding: 10px;
+  margin: 0px;
+  cursor: pointer;
+  position: relative;
+  top: 5.5%;
+  left: -3px;
+  font-family: 'Courier New', Courier, monospace;
+  width: 100%;
+  height: 90%;
+  border-left: none;
+}
+.Map {
+  height: 300px;
+  width: 95%;
+  margin: 5%;
+  position: relative;
+  left:-5%;
+}
 
 
 /* tests below*/
