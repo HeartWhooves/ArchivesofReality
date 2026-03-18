@@ -246,6 +246,36 @@ summary {
   margin: 10px;
 }
 
+.ViewportContainer {
+  position: relative;
+  width: 90%;
+  height: 100%;
+  display:grid;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: 5fr 5fr;
+  border: #be7c01 2px solid;
+  border-radius: 5px;
+  padding: 20px;
+  padding-top: 10px;
+ right: -3%;
+}
+
+.Viewport {
+  color: #1a1044;
+  border: 2px double purple;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+  position: relative;
+  top: 5.5%;
+  left: -3px;
+  font-family: 'Courier New', Courier, monospace;
+  width: 90%;
+  background: #0b0614;
+
+}
+
 /* tests below*/
 
 
