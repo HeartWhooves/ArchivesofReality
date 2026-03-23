@@ -1,4 +1,7 @@
 //no idea what im doing with this, im not here yet
+
+//Next Buttons for introduction text
+
 // Select the elements using their IDs
 const textareaElement = document.getElementById('Introduction');
 const nextButtonElement = document.getElementById('nextIntro');
@@ -16,3 +19,27 @@ function prevIntro() {
 // Add a click event listener to the button
 nextButtonElement.addEventListener('click', nextIntro);
 prevButtonElement.addEventListener('click', prevIntro);
+
+//make the pets change the image
+
+//Select the elements using their IDs
+const petDiv = document.getElementById('PetsIntro');
+const IntroImage = document.getElementById('IntroductionImage');
+
+// Store the original and new image sources
+const originalSrcI = 'images/Archivist Dialogue Image.png';
+const newSrcI = 'images/Archivist Dialogue Image (Pet).png';
+
+// Function to change the image source on mouse enter
+function changeImage() {
+    IntroImage.src = newSrcI;
+}
+
+// Function to revert the image source on mouse leave
+function restoreImage() {
+    IntroImage.src = originalSrcI;
+}
+
+// Add event listeners for mouseenter and mouseleave
+petDiv.addEventListener('mouseenter', changeImage);
+petDiv.addEventListener('mouseleave', restoreImage);
