@@ -103,7 +103,7 @@ main {
   top: 50px;
   cursor: context-menu;
   border-radius: 30px;
-
+  opacity: 1;
 }
 
 .ArchivistChatPrev {
