@@ -63,3 +63,22 @@ window.addEventListener('mousemove', (e) => {
 }
 });
 //Label Js Ends Here
+
+//Disk of the Day JS Below Here
+const audio = document.getElementById('DailySong');
+const button = document.getElementById('DiskoftheDay');
+
+        function toggleMusic() {
+            if (audio.paused) {
+                audio.play();
+                button.classList.add('playing');
+            } else {
+                audio.pause();
+                button.classList.remove('playing');
+            }
+        }
+
+           // Adjusts audio volume dynamically
+        function changeVolume(val) {
+            audio.volume = val;
+        }

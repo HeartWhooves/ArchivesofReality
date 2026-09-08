@@ -42,15 +42,24 @@
         <div class="HeartRadioContainer">
             <div class="SongoftheDay" id="SongoftheDay">
                 <h2>Song of the Day</h2>
-                <iframe src="https://jellyfin.archivesofreality.com/web/#/details?id=6143df1a27fcc379d96dfabe6c33647e&serverId=9385fb3556f24236b1410943fa1c832d" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                <p>Username if needed is HeartRadio</p>
-                <p>There is no Password</p>
+                <audio id="DailySong" src="../Songs/I Like to Party.mp3" loop volume="0.2"></audio>
+
+                <button class="DiskoftheDay" id="DiskoftheDay" onclick="toggleMusic()"></button>
+
+
+                    <!-- Volume Control -->
+                <div class="music-controls-container">
+                    <span class="volume-label">🔊</span>
+                    <input type="range" id="volumeSlider" class="volume-slider" min="0" max="1" step="0.01" value="1" oninput="changeVolume(this.value)">
+                </div>
+                <h3>"I Like to Party" - Jaguar Twin</h1>
 
             </div>
             <div class="HeartRadio" id="HeartRadio">
                 <h2>Heart Radio</h2>
                 <iframe  src="https://jellyfin.archivesofreality.com/web/#/music?topParentId=da8c6a2c8e7a8c4ade68faa45b00691e&collectionType=music" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                 <p>Scroll to "songs," hit shuffle and enjoy!</p>
+
             </div>
         </div>
     </main>

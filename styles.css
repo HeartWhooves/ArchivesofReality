@@ -467,6 +467,79 @@ summary {
   opacity: 1; /* Makes the label visible when hovering over the ViewCrop */
 }
 
+        /* The CD Container */
+.DiskoftheDay {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: url('images/OrbitingCoverArt.png'); 
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 0 10px rgba(0,0,0,0.1), 0 10px 20px rgba(0,0,0,0.3);
+  border: 5px solid goldenrod;
+  cursor: pointer;
+  position: relative;
+  outline: none;     
+  animation: spin 3s linear infinite;
+  animation-play-state: paused; /* Paused by default */
+  transition: transform 0.2s;
+}
+
+    /* The Center Hole of the CD */
+.DiskoftheDay::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  background-color: #e0e0e0; /* Matches body background */
+  border-radius: 50%;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.5);
+  border: 3px solid goldenrod;
+}
+
+  /* Click shrink effect */
+.DiskoftheDay:active {
+    transform: scale(0.95);
+}
+
+        /* Active Spinning Class toggled by JS */
+.DiskoftheDay.playing {
+  animation-play-state: running;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.controls-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.volume-label {
+  font-size: 14px;
+  font-weight: bold;
+  color: red;
+}
+
+.volume-slider {
+    cursor: pointer;
+  background: black;
+  accent-color: goldenrod; /* Colors the slider knob */
+        }
 
 
 /* tests below*/

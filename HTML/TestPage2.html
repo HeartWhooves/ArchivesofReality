@@ -3,29 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spinning CD Player Button</title>
+    <title>Spinning CD Player</title>
     <style>
         body {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f0f0f0;
+            background-color: #e0e0e0;
             margin: 0;
             font-family: sans-serif;
         }
 
-        /* The CD Button Style */
+        /* The CD Container */
         .cd-button {
-            width: 150px;
-            height: 150px;
+            
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
-            background: radial-gradient(circle, #333 20%, #111 21%, #222 30%, #444 40%, #222 50%, #555 60%, #222 70%);
-            border: 4px solid #fff;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            /* 1. Album Art Background */
+            background-image: url('../images/OrbitingCoverArt.png'); /* Live sample image */
+            background-size: cover;
+            background-position: center;
+            
+            /* Shiny CD overlay texture so it looks like a disc */
+            box-shadow: inset 0 0 0 10px rgba(0,0,0,0.1), 0 10px 20px rgba(0,0,0,0.3);
+            border: 5px solid goldenrod;
             cursor: pointer;
             position: relative;
             outline: none;
+            
+            /* 2. Smooth Stop Mechanism */
+            animation: spin 3s linear infinite;
+            animation-play-state: paused; /* Paused by default */
             transition: transform 0.2s;
         }
 
@@ -38,19 +48,20 @@
             transform: translate(-50%, -50%);
             width: 30px;
             height: 30px;
-            background-color: #f0f0f0;
+            background-color: #e0e0e0; /* Matches body background */
             border-radius: 50%;
-            border: 2px solid #ccc;
+            box-shadow: inset 0 0 5px rgba(0,0,0,0.5);
+            border: 3px solid goldenrod;
         }
 
-        /* Click effect */
+        /* Click shrink effect */
         .cd-button:active {
             transform: scale(0.95);
         }
 
-        /* The Spinning Animation Class */
-        .spinning {
-            animation: spin 3s linear infinite;
+        /* Active Spinning Class toggled by JS */
+        .cd-button.playing {
+            animation-play-state: running;
         }
 
         @keyframes spin {
@@ -61,16 +72,43 @@
                 transform: rotate(360deg);
             }
         }
+                /* Volume Control Layout */
+        .controls-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .volume-label {
+            font-size: 14px;
+            font-weight: bold;
+            color: red;
+        }
+
+        .volume-slider {
+            cursor: pointer;
+            background: black;
+            accent-color: goldenrod; /* Colors the slider knob */
+        }
     </style>
 </head>
 <body>
 
-    <!-- The Audio Element -->
-    <!-- Replace 'your-song.mp3' with the actual path to your audio file -->
-    <audio id="myAudio" src="../Songs/I Like to Party.mp3 Like to Party.mp3" loop></audio>
+    <audio id="myAudio" src="../Songs/I Like to Party.mp3" loop volume="0.2"></audio>
 
     <!-- The CD Button -->
     <button class="cd-button" id="cdButton" onclick="toggleMusic()"></button>
+
+
+    <!-- Volume Control -->
+    <div class="controls-container">
+        <span class="volume-label">🔊</span>
+        <input type="range" id="volumeSlider" class="volume-slider" min="0" max="1" step="0.01" value="1" oninput="changeVolume(this.value)">
+    </div>
 
     <script>
         const audio = document.getElementById('myAudio');
@@ -79,11 +117,16 @@
         function toggleMusic() {
             if (audio.paused) {
                 audio.play();
-                button.classList.add('spinning');
+                button.classList.add('playing');
             } else {
                 audio.pause();
-                button.classList.remove('spinning');
+                button.classList.remove('playing');
             }
+        }
+
+           // Adjusts audio volume dynamically
+        function changeVolume(val) {
+            audio.volume = val;
         }
     </script>
 
