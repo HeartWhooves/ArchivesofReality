@@ -410,7 +410,6 @@ summary {
 }
 
 .Desk {
-  position: relative;
   top: 0px;
   left: 0px;
   width: 100%;
@@ -453,6 +452,8 @@ summary {
   opacity: 0;
   transition: opacity 0.2s ease;
   transform: translate(var(--x, 0px), var(--y, 0px));
+  top: 0px;
+  left: 0px;
 }
 
 .ViewLabel p {

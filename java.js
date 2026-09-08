@@ -57,8 +57,8 @@ const viewLabel = document.getElementById('ViewLabel');
 if (viewCrop && viewLabel) {
 
 window.addEventListener('mousemove', (e) => {
-    viewLabel.style.setProperty('--x', (e.clientX) + 15 + 'px');
-    viewLabel.style.setProperty('--y', (e.clientY) + 15 + 'px');
+    viewLabel.style.setProperty('--x', (e.clientX) + 25 + 'px');
+    viewLabel.style.setProperty('--y', (e.clientY) + 25 + 'px');
 });
 }
 });
