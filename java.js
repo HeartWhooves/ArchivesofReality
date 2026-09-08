@@ -16,9 +16,11 @@ function prevIntro() {
     textareaElement.value = '   Welcome to My Archive, My personal collection of tapestries and stories gathered from the depths of the Cosmic Loom itself. The tales you will read here are older than time itself, gathered straight from the source and preserved outside the bounds of the multiverse. This Website will be your window into these dreams, and I will be your guide as Currator and Archivist.';
 }
 
-// Add a click event listener to the button
-nextButtonElement.addEventListener('click', nextIntro);
-prevButtonElement.addEventListener('click', prevIntro);
+// Add listeners only on pages that contain the introduction controls
+if (textareaElement && nextButtonElement && prevButtonElement) {
+    nextButtonElement.addEventListener('click', nextIntro);
+    prevButtonElement.addEventListener('click', prevIntro);
+}
 
 //make the pets change the image
 
@@ -40,6 +42,24 @@ function restoreImage() {
     IntroImage.src = originalSrcI;
 }
 
-// Add event listeners for mouseenter and mouseleave
-petDiv.addEventListener('mouseenter', changeImage);
-petDiv.addEventListener('mouseleave', restoreImage);
+// Add listeners only on pages that contain the pet interaction
+if (petDiv && IntroImage) {
+    petDiv.addEventListener('mouseenter', changeImage);
+    petDiv.addEventListener('mouseleave', restoreImage);
+}
+
+// Label Js Below Here
+document.addEventListener('DOMContentLoaded', () => {
+
+const viewCrop = document.querySelector('.ViewCrop');
+const viewLabel = document.getElementById('ViewLabel');
+
+if (viewCrop && viewLabel) {
+
+window.addEventListener('mousemove', (e) => {
+    viewLabel.style.setProperty('--x', (e.clientX) + 15 + 'px');
+    viewLabel.style.setProperty('--y', (e.clientY) + 15 + 'px');
+});
+}
+});
+//Label Js Ends Here

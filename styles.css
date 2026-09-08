@@ -329,7 +329,7 @@ summary {
   position: relative;
   width: 90%;
   height: 100%;
-  display:grid;
+  display: grid;
   grid-template-columns: 2fr 2fr;
   grid-template-rows: 5fr 5fr;
   border: #be7c01 2px solid;
@@ -399,6 +399,73 @@ summary {
   border-radius: 60px;
 
 }
+
+.LobbyDesk {
+  display: block;
+  
+  position: absolute;
+  width: 100%;
+  height: 60%;
+
+}
+
+.Desk {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: -1; /* Places the image behind other content */
+}
+
+.ViewportObject {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+}
+
+.ViewCrop {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 11%;
+  height: 17%;
+  overflow: hidden; /* Ensures that any part of the image outside this div is not visible */
+  cursor: url('../images/EyeOfSprez.png'), zoom-in; /* Custom cursor */
+  top: 14%;
+  left: 43%;
+}
+
+.ViewLabel {
+  position: fixed;
+  width: fit-content;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+  color: #be7c01;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: small;
+  text-align: center;
+  pointer-events: none; 
+  border: 2px solid #be7c01;
+  border-radius: 10px;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  transform: translate(var(--x, 0px), var(--y, 0px));
+}
+
+.ViewLabel p {
+  margin: 0;
+  padding: 5px;
+  text-align: center;
+  text-indent: 0px;
+}
+
+.ViewCrop:hover .ViewLabel {
+  opacity: 1; /* Makes the label visible when hovering over the ViewCrop */
+}
+
 
 
 /* tests below*/
