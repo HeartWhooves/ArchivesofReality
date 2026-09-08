@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinning CD Player Button</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        /* The CD Button Style */
+        .cd-button {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #333 20%, #111 21%, #222 30%, #444 40%, #222 50%, #555 60%, #222 70%);
+            border: 4px solid #fff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            cursor: pointer;
+            position: relative;
+            outline: none;
+            transition: transform 0.2s;
+        }
+
+        /* The Center Hole of the CD */
+        .cd-button::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 30px;
+            height: 30px;
+            background-color: #f0f0f0;
+            border-radius: 50%;
+            border: 2px solid #ccc;
+        }
+
+        /* Click effect */
+        .cd-button:active {
+            transform: scale(0.95);
+        }
+
+        /* The Spinning Animation Class */
+        .spinning {
+            animation: spin 3s linear infinite;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- The Audio Element -->
+    <!-- Replace 'your-song.mp3' with the actual path to your audio file -->
+    <audio id="myAudio" src="your-song.mp3" loop></audio>
+
+    <!-- The CD Button -->
+    <button class="cd-button" id="cdButton" onclick="toggleMusic()"></button>
+
+    <script>
+        const audio = document.getElementById('myAudio');
+        const button = document.getElementById('cdButton');
+
+        function toggleMusic() {
+            if (audio.paused) {
+                audio.play();
+                button.classList.add('spinning');
+            } else {
+                audio.pause();
+                button.classList.remove('spinning');
+            }
+        }
+    </script>
+
+</body>
+</html>
