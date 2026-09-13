@@ -1,6 +1,10 @@
 body {
   background-color: black;
-
+  background-image: url('/images/AverageTuesday.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 100vh;
+  background-attachment: fixed;
 }
 
 h1 {
@@ -58,7 +62,6 @@ h4 {
 }
 
 .LobbyContainer {
-  background-color: black;
   padding: 20px;
   margin: 20px;
   gap: 20px;
@@ -71,12 +74,13 @@ main {
 
 .Updates {
   position: absolute;
-  background-color: #050505;
+  background-color: #050505cb;
   padding: 1rem;
   border-left: 2px solid #be7c01;
   width:25%;
   right: 0px;
   top: 350px;
+  box-shadow: -2px 0px 5px #be7c01;
 }
 
 .IntroductionContainer {
@@ -87,7 +91,7 @@ main {
 
 .Introduction {
   color: #be7c01;
-  background-color: #050505;
+  background-color: #050505ce;
   padding: 25px;
   border: 2px solid #be7c01;
   margin: 20px;
@@ -104,6 +108,7 @@ main {
   cursor: context-menu;
   border-radius: 30px;
   opacity: 1;
+  box-shadow: 0px 0px 10px #be7c01;
 }
 
 .ArchivistChatPrev {
@@ -118,6 +123,7 @@ main {
   right: -3px;
   font-family: 'Courier New', Courier, monospace;
   border-radius: 30px;
+  box-shadow: 0px 0px 5px purple;
 }
 
 .ArchivistChatNext {
@@ -132,7 +138,7 @@ main {
   right: -59px;
   font-family: 'Courier New', Courier, monospace;
   border-radius: 30px;
-
+  box-shadow: 0px 0px 5px purple;
 }
 
 .IntroductionImage {
@@ -365,13 +371,19 @@ summary {
 }
 
 .SongoftheDay {
+  position: relative;
   text-align: center;
-  width: 100%;
+  width: 300px;
   height: fit-content;
   border: 2px solid #be7c01;
   inset: 20px;
   border-radius: 20px;
-
+  background-color: #050505e8;
+  box-shadow: 0px 0px 10px #be7c01;
+  display: flex;
+  flex-direction: column;
+  top: -115px;
+  left: 200px;
 }
 
 .SongoftheDay iframe {
@@ -384,12 +396,34 @@ summary {
 
 .HeartRadio {
   text-align: center;
-  width: 100%;
+  width: 150px;
   height: fit-content;
   border: 2px solid #be7c01;
   inset: 20px;
   border-radius: 20px;
+  background-color: #050505e8;
+  box-shadow: 0px 0px 10px #be7c01;
+  position: relative;
+  top: -350px;
+  left: -20px;
+}
 
+.HeartRadio p {
+  color: #7e5303;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: small;
+  text-align: center;
+  text-indent: 0px;
+  margin: 10px;
+}
+
+.HeartRadio h2 {
+  color: #be7c01;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
+  text-align: center;
+  text-indent: 0px;
+  margin: 10px;
 }
 
 .HeartRadio iframe {
@@ -483,6 +517,7 @@ summary {
   animation: spin 3s linear infinite;
   animation-play-state: paused; /* Paused by default */
   transition: transform 0.2s;
+  left: 50px;
 }
 
     /* The Center Hole of the CD */
@@ -542,6 +577,33 @@ summary {
         }
 
 
+.StatusBox {
+  position: relative;
+  top: 0px;
+  right: 50px;
+  background-color: #050505e8;
+  color: #be7c01;
+  border: 2px solid #be7c01;
+  padding: 10px;
+  border-radius: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: small;
+  size: fit-content;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  box-shadow: 0px 0px 10px goldenrod;
+}        
+
+.StatusBox p {
+  margin: 5px 0;
+  text-align: left;
+  color: #be7c01;
+  font-size: small;
+  font-family: 'Courier New', Courier, monospace;
+  text-indent: 0px;
+
+}
 /* tests below*/
 
 

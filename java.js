@@ -65,6 +65,7 @@ window.addEventListener('mousemove', (e) => {
 //Label Js Ends Here
 
 //Disk of the Day JS Below Here
+if (DailySong && DiskoftheDay) {
 const audio = document.getElementById('DailySong');
 const button = document.getElementById('DiskoftheDay');
 
@@ -82,3 +83,38 @@ const button = document.getElementById('DiskoftheDay');
         function changeVolume(val) {
             audio.volume = val;
         }
+    }
+
+// Status Block JS Below Here
+if (mood && Status && currently) {
+  async function fetchStatus() {
+    try {
+      // Direct URL with your ID included correctly
+        const response = await fetch('https://api.jsonbin.io/v3/b/6aa60ab6ffd5d1605300196b/latest', {
+        method: 'GET',
+        headers: { 
+          'X-Master-Key': '$2a$10$C2eVwhBgF5Gj0kuPxfcDvOyNONksdPjNh3.P/xTCMIpo.g7iSq62O', // <--- Put your Master Key here
+          'Content-Type': 'application/json'
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      
+      if (data.record) {
+        document.getElementById('mood').innerText = data.record.mood || 'Lost';
+        document.getElementById('Status').innerText = data.record.status || 'Silent';
+        document.getElementById('currently').innerText = data.record.currently || 'Bored';
+      }
+
+    } catch (error) {
+      console.error('Error fetching status:', error);
+      document.getElementById('status').innerText = `Error: ${error.message}`;
+    }
+  }
+
+  fetchStatus();
+}

@@ -34,13 +34,12 @@
             <button class="ArchivistChatNext" id="nextIntro" onclick="nextIntro()">Next</button>
         </div>
     </br>
-    </br>
-    </br>
-    </br>
-    </br>
-    </br>
-        <div class="HeartRadioContainer">
-            <div class="SongoftheDay" id="SongoftheDay">
+    <div id="StatusBox" class="StatusBox">
+        <p><strong>Mood:</strong><span id="mood">Loading...</span></p>
+        <p><strong>Status:</strong> <span id="Status">Loading...</span></p>
+        <p><strong>Currently:</strong> <span id="currently">Loading...</span></p>
+    </div>
+                <div class="SongoftheDay" id="SongoftheDay">
                 <h2>Song of the Day</h2>
                 <audio id="DailySong" src="Songs/Cigarette Daydreams.mp3" loop volume="0.2"></audio>
 
@@ -57,12 +56,11 @@
             </div>
             <div class="HeartRadio" id="HeartRadio">
                 <h2><a href="https://jellyfin.archivesofreality.com" >Heart Radio</a></h2>
-                <iframe  src="https://jellyfin.archivesofreality.com/web/#/music?topParentId=da8c6a2c8e7a8c4ade68faa45b00691e&collectionType=music" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                <p>Scroll to "songs," hit shuffle and enjoy!</p>
-                <p>Click the title of the section to open in another window. This is my personal Jellyfin Server and radio station so enjoy the beats!</p>
+                
+                <p>For more hits, Visit my radiostation! (Jellyfin Server)</p>
+                <p>Click Heart Radio to listen!</p>
 
             </div>
-        </div>
     </main>
         <aside class="Updates">
             <h2>Quick Access</h2>
