@@ -86,8 +86,7 @@ const button = document.getElementById('DiskoftheDay');
     }
 
 // Status Block JS Below Here
-if (mood && Status && currently) {
-  async function fetchStatus() {
+if (document.getElementById('mood') && document.getElementById('Status') && document.getElementById('currently')) {  async function fetchStatus() {
     try {
       // Direct URL with your ID included correctly
         const response = await fetch('https://api.jsonbin.io/v3/b/6aa60ab6ffd5d1605300196b/latest?v=4', {
