@@ -90,7 +90,7 @@ if (mood && Status && currently) {
   async function fetchStatus() {
     try {
       // Direct URL with your ID included correctly
-        const response = await fetch('https://api.jsonbin.io/v3/b/6aa60ab6ffd5d1605300196b/latest?update=true', {
+        const response = await fetch('https://api.jsonbin.io/v3/b/6aa60ab6ffd5d1605300196b/latest?v=4', {
         method: 'GET',
         headers: { 
           'X-Master-Key': '$2a$10$C2eVwhBgF5Gj0kuPxfcDvOyNONksdPjNh3.P/xTCMIpo.g7iSq62O', // <--- Put your Master Key here
