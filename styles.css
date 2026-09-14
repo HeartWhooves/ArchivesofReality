@@ -455,6 +455,7 @@ summary {
   top: 0px;
   left: 0px;
   width: 100vw;
+  z-index: 99;
 }
 
 .ViewCrop {
@@ -488,6 +489,8 @@ summary {
   transform: translate(var(--x, 0px), var(--y, 0px));
   top: 0px;
   left: 0px;
+  cursor: url('../images/EyeOfSprez.png'), zoom-in; /* Custom cursor */
+
 }
 
 .ViewLabel p {
