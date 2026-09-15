@@ -168,12 +168,73 @@ main {
 }
 
 details {
-  background-color: #050505;
+  position: relative;
+  background-color: #2a0b3f20;
   color: #be7c01;
   border: 2px solid #be7c01;
   padding: 10px;
   margin: 20px;
   font-family: 'Courier New', Courier, monospace;
+  isolation: isolate;
+  z-index: 500;
+  border-radius: 10px;
+  border-left: 0px;
+  border-right: 0px;
+  box-shadow: 0px -8px 10px -8px #be7c01, 0px 8px 10px -8px #be7c01;
+}
+
+details[open] {
+z-index: 700 !important;
+}
+
+details p {
+  color: #bc7a00;
+}
+
+#C-KoE details[open]::details-content {
+position:absolute;
+left: 0%;
+}
+
+#C-CL details {
+  z-index: 3;
+}
+
+#C-CL details[open]::details-content {
+  position: absolute;
+  right: 0%;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+details::details-content {
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid #be7c01;
+  background-color: #050505;
+  height:0px;
+  opacity: 0;
+  overflow: hidden;
+  z-index: 500;
+  isolation:isolate;
+}
+
+details[open]::details-content {
+  background-color: #0c0113bf;
+  color: #be7c01;
+  border: 2px solid #be7c01;
+  padding: 10px;
+  margin: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  width: 200%;
+  opacity: 1;
+  height:auto;
+  z-index: 600;
+  border-radius: 10px;
+  border-left: 0px;
+  border-right: 0px;
+  box-shadow: 0px -8px 10px -8px #be7c01, 0px 8px 10px -8px #be7c01;
+
 }
 
 summary {
@@ -201,6 +262,91 @@ summary {
   left: -3px;
   font-family: 'Courier New', Courier, monospace;
   width: 90%;
+  background: #0b061465;
+  box-shadow: 0px 0px 10px purple;
+  z-index: 1;
+}
+
+#C-KoE {
+  color: #1a1044;
+  border: 2px double purple;
+  padding: 5px 10px;
+  margin: 10px;
+  cursor: pointer;
+  position: relative;
+  top: 5.5%;
+  left: -3px;
+  font-family: 'Courier New', Courier, monospace;
+  width: 90%;
+  background: #0b061465;
+  box-shadow: 0px 0px 10px purple;
+}
+
+#C-CL {
+  color: #1a1044;
+  border: 2px double purple;
+  padding: 5px 10px;
+  margin: 10px;
+  cursor: pointer;
+  position: relative;
+  top: 5.5%;
+  left: -3px;
+  font-family: 'Courier New', Courier, monospace;
+  width: 90%;
+  background: #0b061465;
+  box-shadow: 0px 0px 10px purple;
+}
+
+
+.Storys:has(details[open]) {
+  z-index: 1000;
+}
+
+#C-CL-A {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  
+}
+
+#C-CL-A img {
+  position: relative;
+  width: 40%;
+  height: auto;
+  border: 3px solid #be7c01;
+  border-radius: 10px;
+  box-shadow: 0px 0px 4px #be7c01;
+}
+
+#C-CL-A p#1{
+  color: #be7c01;
+  text-indent: 0px;
+  margin: 10px;
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  width: 50%;
+}
+
+#C-CL-A p#2{
+  color: #be7c01;
+  text-indent: 0px;
+  margin: 10px;
+  position: absolute;
+  top: 50px;
+  right: 0px;
+  width: 50%;
+}
+
+#C-CL-A ul {
+  color: #be7c01;
+  text-indent: 0px;
+  margin: 10px;
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  width: 50%;
+  font-size: 20px;
 }
 
 .WorldsContainer {
@@ -627,3 +773,4 @@ summary {
   border: 1px solid black;
   box-sizing: border-box; /* Ensures padding/border is included in the element's total width/height */
 }
+
