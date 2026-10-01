@@ -1,0 +1,142 @@
+<!DOCTYPE html>\
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; connect-src 'self' https://jsonbin.io;">
+    <title>Lobby - The Archives</title>
+    <link rel="stylesheet" href="styles.css?v=1">
+    <link rel="canonical" href="https://archivesofreality.com/index.html">
+</head>
+
+<body id="Lobby">
+    <header>
+        <h1>The Archives</h1>
+        <nav class="navigator">
+            <table class="navigator">
+                <th><a href="index.html">Lobby</a></th>
+                <th><a href="HTML/About.html">About</a></th>
+                <th><a href="HTML/Viewport.html">Viewport</a></th>
+                <th><a href="HTML/Characters.html">Characters</a></th>
+                <th><a href="HTML/Worlds.html">Worlds</a></th>
+            </table>
+        </nav>
+        <img src="images/Archive_Header.png" alt="Archive Header" id="HeaderImg" height="200px" style="display: block; margin: 0 auto; width: auto; max-width: fit-content;" />
+    </header>
+    <main>
+      <div class ="LobbyContainer">
+
+        <div class="IntroductionContainer">
+            <div class="IntroductionImage">
+                <img src="images/Archivist Dialogue Image.png" alt="Archivist Dialogue Image" id="IntroductionImage"/>
+                <div class="Pets" id="PetsIntro"></div>
+            </div>
+            <textarea  class="Introduction" id="Introduction" disabled rows="8" cols="70" readonly>   Welcome to My Archive, My personal collection of tapestries and stories gathered from the depths of the Cosmic Loom itself. The tales you will read here are older than time itself, gathered straight from the source and preserved outside the bounds of the multiverse. This Website will be your window into these dreams, and I will be your guide as Currator and Archivist.</textarea>
+            <button class="ArchivistChatPrev" id="prevIntro" onclick="prevIntro()">Back</button>
+            <button class="ArchivistChatNext" id="nextIntro" onclick="nextIntro()">Next</button>
+        </div>
+    </br>
+    <div id="StatusBox" class="StatusBox">
+        <p><strong>Mood:</strong><span id="mood">Loading...</span></p>
+        <p><strong>Status:</strong> <span id="Status">Loading...</span></p>
+        <p><strong>Currently:</strong> <span id="currently">Loading...</span></p>
+    </div>
+                <div class="SongoftheDay" id="SongoftheDay">
+                <h2>Song of the Day</h2>
+                <audio id="DailySong" src="./Songs/Rabbit Hole.mp3" loop volume="0.2"></audio>
+
+                <button class="DiskoftheDay" id="DiskoftheDay" onclick="toggleMusic()"></button>
+
+
+                    <!-- Volume Control -->
+                <div class="music-controls-container">
+                    <span class="volume-label">🔊</span>
+                    <input type="range" id="volumeSlider" class="volume-slider" min="0" max="1" step="0.01" value="1" oninput="changeVolume(this.value)">
+                </div>
+                <h3>"Rabbit Hole" - Rachie</h3>
+
+            </div>
+            <div class="HeartRadio" id="HeartRadio">
+                <h2><a href="https://jellyfin.archivesofreality.com" >Heart Radio</a></h2>
+                
+                <p>For more hits, Visit my radiostation! (Jellyfin Server)</p>
+                <p>Click Heart Radio to listen!</p>
+
+            </div>
+    </main>
+        <aside class="Updates">
+            <h2>Quick Access</h2>
+                <h3>Characters</h3>
+                    <ul>
+                        <li><a href="HTML/Characters.html#C-KoE">Ryze Endite</a></li>
+                        <li><a href="HTML/Characters.html#C-CL">The Avatar</a></li>
+                        <li><a href="HTML/Characters.html#C-CL">The Archivist</a></li>
+                        <li><a href="HTML/Characters.html#C-CL">The Weaver</a></li>
+                        <li><a href="HTML/Characters.html#C-CL">The Cessation</a></li>
+                    </ul>
+                <h3>Worlds</h3>
+                    <ul>
+                        <li><a href="HTML/Worlds.html#W-KoE">Kingdom of Endite</a></li>
+                        <li><a href="HTML/Worlds.html#W-FoEL">FoE:Luck</a></li>
+                        <li><a href="HTML/Worlds.html#W-CC">Celestial Cafe</a></li>
+                        <li><a href="HTML/Worlds.html#W-JoM">Journal of a Merchant</a></li>
+                        <li><a href="HTML/Worlds.html#W-CL">The Cosmic Loom</a></li>
+                        <li><a href="HTML/Worlds.html#W-SL">Starstruck Love</a></li>
+                        <li><a href="HTML/Worlds.html#W-CotBS">Cult of the Black Star</a></li>
+                        <li><a href="HTML/Worlds.html#W-FW">A Fallen World</a></li>
+                    </ul>
+                <h3>Stories</h3>
+                    <ul>
+                        <h4>Below are work in titles, please suggest titles if any ideas are had</h4>
+                        <li><a href="HTML/Stories/KoE/KoE1.html">Kingdom of Endite</a></li>
+                        <li><a href="HTML/Stories/FoEL/FoEL1.html">FoE:Luck</a></li>
+                        <li><a href="HTML/Stories/CC/CC1.html">Celestial Cafe</a></li>
+                        <li><a href="HTML/Stories/JoM/JoM1.html">Journal of a Merchant</a></li>
+                        <li><a href="HTML/Stories/CL/CL1.html">The Cosmic Loom</a></li>
+                        <li><a href="HTML/Stories/SL/SL1.html">Starstruck Love</a></li>
+                        <li><a href="HTML/Stories/CotBS/CotBS1.html">Cult of the Black Star</a></li>
+                        <li><a href="HTML/Stories/FW/FW1.html">A Fallen World</a></li>
+                    </ul>
+            <h2>Recent Updates</h2>
+                <h3>Site Features</h3>
+                    <ul>
+                        <li>Complete Redesignish of Lobby Underway</li>
+                        <li>Broke Comment Sections I Think</li>
+                        <li>Song of the Day</li>
+                        <li>Background Image</li>
+                        <li>Status Box</li>
+                    </ul>
+                <h3>Coming Soon</h3>
+                    <ul>
+                        <li>Ease of access for myself changing SotD</li>
+                        <li><a href="HTML/ExperimentalIndex.html">Experimental Lobby</a></li>
+                    </ul>
+        </aside>
+      </div>
+      <div class="Comments" id="disqus_thread"></div>
+    </br>
+    <footer>
+        <p>&copy; 2026 Cosmic Archivist. All rights reserved.</p>
+    </footer>
+<script>
+    // this script is exclusive to this disqus comment section. Repeat but re-configure for other pages when needed.
+
+    var disqus_config = function () {
+    this.page.url = archivesofreality.com/index.html;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = Lobby; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://archives-of-reality.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <script src="java.js"></script>
+</body>
+    <footer>
+        <p>&copy; 2026 Cosmic Archivist. All rights reserved.</p>
+    </footer>
+</html>
+
